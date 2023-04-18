@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+/* font-family: 'Righteous', cursive; */
+
+body{
+    width: 100vw;
+    height: 100vh;
+
+    background-color:#B8B08D;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.card{
+    width: 650px;
+    height: 750px;
+    border-radius: 20px;
+    gap: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #283845;
+    font-family: 'Righteous', cursive;
+}
+
+input{
+    width: 450px;
+    height: 40px;
+    
+}
+
+
+
+img{
+    width: 800px;
+    height: 800px;
+}   

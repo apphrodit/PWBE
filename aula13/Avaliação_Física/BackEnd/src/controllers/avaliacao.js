@@ -1,6 +1,12 @@
 const con = require("../dao/connection");
 const Avaliacao = require("../models/avaliacao")
 
+const modelarLista = (lista) =>{
+    for(i = 0; i < lista.length; i++)
+        lista[i] = new Avaliacao(lista[i])
+    return lista
+}
+
 
 const cadastrar = (req,res) => {
     let avaliar = new Avaliacao(req.body)
@@ -15,8 +21,9 @@ const cadastrar = (req,res) => {
 const listar = (req, res) => {
     let avaliar = new Avaliacao(req.params)
     con.query(avaliar.read(), (err, result) => {
-        if(err == null)
-            res.json(result).end()
+        if(err == null){
+            res.json(modelarLista(result)).end()
+        } 
     })
 }
 
